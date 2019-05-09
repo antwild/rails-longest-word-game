@@ -1,0 +1,66 @@
+// Place all the styles related to the games controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+ul li {
+  list-style: none;
+  display: inline;
+}
+
+li {
+  background-color: #046820;
+  padding: 15px 20px;
+  margin: 0 10px;
+  border-radius: 2px;
+  border: 1px solid black;
+  width: 30px;
+  font-size: 30px;
+  box-shadow: 1px 1px 3px grey;
+  color: gold;
+}
+
+p {
+  margin-top: 50px;
+  margin-bottom: 25px;
+  display: inline-block;
+}
+
+.input-form {
+  height: 30px;
+  width: 50%;
+}
+
+#submit {
+  // background-color: green;
+  // border-radius: 2px;
+  width: 10%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
