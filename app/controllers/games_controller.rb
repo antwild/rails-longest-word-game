@@ -8,16 +8,17 @@ class GamesController < ApplicationController
 
   def score
     true_words
-    sorted_grid = params[:letters].split
-    sorted_player_word = params[:player].split(//)
+    grid = params[:letters]
+    player = params[:player]
+    @points = player.length
 
-      if (sorted_player_word - sorted_grid).empty? == false
-        @message = "Sorry, '#{params[:player]}' can't be made from #{params[:letters]}"
-      elsif @words['found'] == false
-        @message = "Sorry, but '#{params[:player]}' does not seem to be a valid English word..."
-      elsif (sorted_player_word - sorted_grid).empty? && @words['found'] == true
-        @message = "Well done, '#{params[:player]}' is a great word!"
-      end
+    if (player.split(//) - grid.split).empty? == false
+      @message = "Sorry, '#{player}' can't be made from #{grid}"
+    elsif @words['found'] == false
+      @message = "Sorry, but '#{player}' is not a valid English word..."
+    elsif (player.split(//) - grid.split).empty? && @words['found'] == true
+      @message = "Well done, '#{player}' is a great word!"
+    end
 
   end
 
@@ -27,4 +28,6 @@ class GamesController < ApplicationController
     url = "https://wagon-dictionary.herokuapp.com/#{params[:player]}"
     @words = JSON.parse(open(url).read)
   end
+
+
 end

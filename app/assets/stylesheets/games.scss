@@ -10,6 +10,7 @@ body {
 .container {
   width: 80%;
   margin: 0 auto;
+  position: relative;
 }
 
 h1 {
@@ -50,13 +51,9 @@ p {
   width: 10%;
 }
 
-
-
-
-
-
-
-
+.score {
+  margin-top: 0;
+}
 
 
 

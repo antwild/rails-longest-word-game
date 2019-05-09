@@ -1,3 +1,15 @@
-<h1>Result</h1>
+<div class="container">
+  <h1>Result</h1>
 
-<p><%= @message %></p>
+  <ul>
+    <% params[:player].split(//).each do |letter| %>
+    <li><%= letter.upcase %></li>
+    <% end %>
+  </ul>
+
+  <p><%= @message %></p><br>
+  <p class="score"><%= params[:player].capitalize %> scores you <%= @points %> points</p>
+  <br>
+  <%= link_to "New game?", new_path %>
+</div>
+
